@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body>
+
+    <form action="{% url 'landing_page:save_message' %}" method="post" role="form">
+          {{ form.as_p }}
+          <div class="form-group">
+            <input type="text" name="user_name" id="user_name" placeholder="Ваше имя" data-rule="minlen:4" data-msg="Пожалуйста, введите не менее 4 букв" />
+            <div class="validate"></div>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" id="email" placeholder="Ваша почта" data-rule="email" data-msg="Введите верную почту" />
+            <div class="validate"></div>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" id="subject" placeholder="Тема вопроса" data-rule="minlen:8" data-msg="Пожалуйста, введите не менее 8 букв" />
+            <div class="validate"></div>
+          </div>
+          <div class="form-group">
+            <textarea name="message" rows="6" data-rule="required" data-msg="Текст" placeholder="Сообщение"></textarea>
+            <div class="validate"></div>
+          </div>
+          <div class="text-center">
+            <button type="submit">Send Message</button>
+          </div>
+    </form>
+
+</body>
+</html>
