@@ -152,18 +152,18 @@
                         {{ form.as_p }}
                             <div class="input__list">
                                 <input type="text" name="user_name" id="user_name" placeholder="Ваше имя" data-rule="minlen:4" data-msg="Пожалуйста, введите не менее 4 букв" />
-                                    <div class="validate"></div>   
+                                    {% comment %} <div class="validate"></div>    {% endcomment %}
                                 {% comment %} <input type="text" placeholder="Name"> {% endcomment %}
                                 <input type="email" name="email" id="email" placeholder="Ваша почта" data-rule="email" data-msg="Введите верную почту" />
-                                    <div class="validate"></div>    
+                                    {% comment %} <div class="validate"></div>     {% endcomment %}
                                 {% comment %} <input type="text" placeholder="Email"> {% endcomment %}
                                 <input type="text" name="subject" id="subject" placeholder="Тема вопроса" data-rule="minlen:8" data-msg="Пожалуйста, введите не менее 8 букв" />
-                                    <div class="validate"></div>    
+                                    {% comment %} <div class="validate"></div>     {% endcomment %}
                                 {% comment %} <input type="text" placeholder="Website"> {% endcomment %}
                                 <textarea name="message" rows="6" data-rule="required" data-msg="Текст" placeholder="Сообщение"></textarea>
-                                    <div class="validate"></div>    
+                                    {% comment %} <div class="validate"></div>     {% endcomment %}
                                 {% comment %} <textarea placeholder="Comment"></textarea> {% endcomment %}
-                                <buttons type="submit" class="site-btn">SEND MESSAGE</button>
+                                <button type="submit" class="site-btn">SEND MESSAGE</button>
                             </div>
                         </form>
                     </div>

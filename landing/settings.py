@@ -99,3 +99,19 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, "media")
 MEDIA_URL = '/media/'
+
+# Contact form code 
+CELERY_BROKER_URL = 'amqp://localhost'
+
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+# your email
+EMAIL_HOST_USER = 'akpayev.nadir@gmail.com'
+# password
+EMAIL_HOST_PASSWORD = 'Nadir19992406'
