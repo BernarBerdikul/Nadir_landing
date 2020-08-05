@@ -7,8 +7,10 @@ from django.urls import reverse
 
 
 def index(request):
-    return render(request, 'base.html')
+    return render(request, 'index.html')
 
+def contact(request):
+    return render(request, 'landing/contact.html')
 
 @method_decorator(csrf_exempt)
 def save_message(request):
