@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
-
 {% load static %}
-
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="DJoz Template">
@@ -38,14 +36,14 @@
             <div class="row">
                 <div class="col-lg-2 col-md-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="{% static 'img/logo.png' %}" alt=""></a>
+                        <a href="/"><img src="{% static 'img/logo.png' %}" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-10">
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li><a href="./index.html">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li class="active"><a href="./contact.html">Contact</a></li>
                             </ul>
                         </nav>
@@ -68,7 +66,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
-                        <a href="#"><i class="fa fa-home"></i> Home</a>
+                        <a href="/"><i class="fa fa-home"></i> Home</a>
                         <span>Contact</span>
                     </div>
                 </div>
@@ -77,7 +75,7 @@
     </div>
     <!-- Breadcrumb End -->
 
-    <!-- Map Begin -->
+    {% comment %} <!-- Map Begin -->
     <div class="map">
         <div class="container">
             <iframe
@@ -85,7 +83,7 @@
                 height="585" style="border:0;" allowfullscreen=""></iframe>
         </div>
     </div>
-    <!-- Map End -->
+    <!-- Map End --> {% endcomment %}
 
     <!-- Contact Section Begin -->
     <section class="contact spad">
@@ -125,14 +123,48 @@
                         </div>
                         <p>Eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                             gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                        <form action="#">
-                            <div class="input__list">
-                                <input type="text" placeholder="Name">
-                                <input type="text" placeholder="Email">
-                                <input type="text" placeholder="Website">
+                        
+                        
+                        {% comment %} <form action="{% url 'landing_page:save_message' %}" method="post" role="form">
+                            {{ form.as_p }}
+                            <div class="form-group">
+                                <input type="text" name="user_name" id="user_name" placeholder="Ваше имя" data-rule="minlen:4" data-msg="Пожалуйста, введите не менее 4 букв" />
+                                <div class="validate"></div>
                             </div>
-                            <textarea placeholder="Comment"></textarea>
-                            <button type="submit" class="site-btn">SEND MESSAGE</button>
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" placeholder="Ваша почта" data-rule="email" data-msg="Введите верную почту" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" id="subject" placeholder="Тема вопроса" data-rule="minlen:8" data-msg="Пожалуйста, введите не менее 8 букв" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" rows="6" data-rule="required" data-msg="Текст" placeholder="Сообщение"></textarea>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit">Send Message</button>
+                            </div>
+                        </form>                 {% endcomment %}
+                        
+                        <form action="{% url 'landing_page:save_message' %}" method="post" role="form">
+                        {{ form.as_p }}
+                            <div class="input__list">
+                                <input type="text" name="user_name" id="user_name" placeholder="Ваше имя" data-rule="minlen:4" data-msg="Пожалуйста, введите не менее 4 букв" />
+                                    <div class="validate"></div>   
+                                {% comment %} <input type="text" placeholder="Name"> {% endcomment %}
+                                <input type="email" name="email" id="email" placeholder="Ваша почта" data-rule="email" data-msg="Введите верную почту" />
+                                    <div class="validate"></div>    
+                                {% comment %} <input type="text" placeholder="Email"> {% endcomment %}
+                                <input type="text" name="subject" id="subject" placeholder="Тема вопроса" data-rule="minlen:8" data-msg="Пожалуйста, введите не менее 8 букв" />
+                                    <div class="validate"></div>    
+                                {% comment %} <input type="text" placeholder="Website"> {% endcomment %}
+                                <textarea name="message" rows="6" data-rule="required" data-msg="Текст" placeholder="Сообщение"></textarea>
+                                    <div class="validate"></div>    
+                                {% comment %} <textarea placeholder="Comment"></textarea> {% endcomment %}
+                                <buttons type="submit" class="site-btn">SEND MESSAGE</button>
+                            </div>
                         </form>
                     </div>
                 </div>
