@@ -10,7 +10,7 @@ def index(request):
     return render(request, 'index.html')
 
 def contact(request):
-    return render(request, 'landing/contact.html')
+    return render(request, 'contact.html')
 
 @method_decorator(csrf_exempt)
 def save_message(request):
