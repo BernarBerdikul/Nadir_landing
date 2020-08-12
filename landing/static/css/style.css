@@ -1668,7 +1668,7 @@ ol {
 	display: inline-block;
 	padding: 14px 25px 12px 30px;
 	background: #5c00ce;
-	float: right;
+	/* float: right; */
 }
 
 .tours__item__text .tours__text__desc {

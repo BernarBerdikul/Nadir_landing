@@ -46,6 +46,7 @@
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <li class="active"><a href="/">Home</a></li>
+                                <li><a href="media">Media</a></li>
                                 <li><a href="contact">Contact</a></li>
                             </ul>
                         </nav>
@@ -92,11 +93,11 @@
                         <h1>Music podcast</h1>
                     </div>
                 </div>
-                {% comment %} <div class="col-lg-5">
+                <div class="col-lg-5">
                     <div class="track__all">
                         <a href="#" class="primary-btn border-btn">View all tracks</a>
                     </div>
-                </div> {% endcomment %}
+                </div>
             </div>
             <div class="row">
                 <div class="col-lg-7 p-0">
@@ -376,13 +377,30 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about__pic">
+                        <img src="{% static 'img/team-leader-pic2.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about__text">
+                        <div class="section-title">
+                            <h2>Zarina</h2>
+                            <h1>About me</h1>
+                        </div>
+                        <p>Text "About me" for explain your activity</p>
+                        <a href="contact" class="primary-btn">CONTACT ME</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about__pic">
                         <img src="{% static 'img/about/about.png' %}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about__text">
                         <div class="section-title">
-                            <h2>Gafiatullina Zarina</h2>
+                            <h2>Kazbek</h2>
                             <h1>About me</h1>
                         </div>
                         <p>Text "About me" for explain your activity</p>
@@ -491,6 +509,7 @@
     <script src="{% static 'js/jquery.slicknav.js' %}"></script>
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/wow.js' %}"></script>
 
     <!-- Music Plugin -->
     <script src="{% static 'js/jquery.jplayer.min.js' %}"></script>

@@ -12,6 +12,9 @@ def index(request):
 def contact(request):
     return render(request, 'contact.html')
 
+def media(request):
+    return render(request, 'media.html')
+
 @method_decorator(csrf_exempt)
 def save_message(request):
     if request.method == 'POST':
