@@ -110,7 +110,7 @@ CELERY_TASK_SERIALIZER = 'json'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 465
+EMAIL_PORT = 25
 # your email
 EMAIL_HOST_USER = 'akpayev.nadir@gmail.com'
 # password

@@ -5,7 +5,7 @@ app_name = 'landing_page'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('save_message/', views.save_message, name='save_message'),
+    path('save_message/', views.send_message, name='send_message'),
     path('contact/', views.contact, name='contact'),
     path('media/', views.media, name='media') 
 ]

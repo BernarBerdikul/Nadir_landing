@@ -45,9 +45,9 @@
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li><a href="/">Home</a></li>
-                                <li class="active"><a href="media">Media</a></li>
-                                <li><a href="contact">Contact</a></li>
+                                <li><a href="{% url 'landing_page:index' %}">Home</a></li>
+                                <li class="active"><a href="{% url 'landing_page:media' %}">Media</a></li>
+                                <li><a href="{% url 'landing_page:contact' %}">Contact</a></li>
                             </ul>
                         </nav>
                         <div class="header__right__social">

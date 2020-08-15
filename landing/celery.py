@@ -1,11 +1,10 @@
-from future import absolute_import, unicode_literals
-
+from __future__ import absolute_import, unicode_literals
 import os
 
 from celery import Celery
 
 # set the default Django settings module for the 'celery' program.
-os.environ.setdefault('DJANGO_SETTINGSMODULE', 'landing.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'landing.settings')
 
 app = Celery('landing')
 

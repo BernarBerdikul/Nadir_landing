@@ -43,9 +43,9 @@
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li><a href="/">Home</a></li>
-                                <li><a href="media/">Media</a></li>
-                                <li class="active"><a href="contact">Contact</a></li>
+                                <li><a href="{% url 'landing_page:index' %}">Home</a></li>
+                                <li><a href="{% url 'landing_page:media' %}">Media</a></li>
+                                <li class="active"><a href="{% url 'landing_page:contact' %}">Contact</a></li>
                             </ul>
                         </nav>
                         <div class="header__right__social">
@@ -128,15 +128,15 @@
                         {% comment %} <form action="{% url 'landing_page:save_message' %}" method="post" role="form">
                             {{ form.as_p }}
                             <div class="form-group">
-                                <input type="text" name="user_name" id="user_name" placeholder="Ваше имя" data-rule="minlen:4" data-msg="Пожалуйста, введите не менее 4 букв" />
+                                <input type="text" name="user_name" placeholder="Ваше имя" data-rule="minlen:4" data-msg="Пожалуйста, введите не менее 4 букв" />
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" id="email" placeholder="Ваша почта" data-rule="email" data-msg="Введите верную почту" />
+                                <input type="email" name="email" placeholder="Ваша почта" data-rule="email" data-msg="Введите верную почту" />
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="subject" id="subject" placeholder="Тема вопроса" data-rule="minlen:8" data-msg="Пожалуйста, введите не менее 8 букв" />
+                                <input type="text" name="subject" placeholder="Тема вопроса" data-rule="minlen:8" data-msg="Пожалуйста, введите не менее 8 букв" />
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group">
