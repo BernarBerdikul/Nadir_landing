@@ -20,7 +20,7 @@ def media(request):
 
 
 @method_decorator(csrf_exempt)
-def send_message(request):
+def save_message(request):
     if request.method == 'POST':
         form = UserMessageForm(request.POST)
         if form.is_valid():
