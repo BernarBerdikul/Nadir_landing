@@ -9,7 +9,7 @@ SECRET_KEY = '*u61vq$nt6o8bu9x@@uj_k$4m3_+4z(=2&sl#mrf*ppt@n$!p('
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', '*']
 
 
 INSTALLED_APPS = [
@@ -105,13 +105,17 @@ CELERY_BROKER_URL = 'amqp://localhost'
 
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
-
-
+CELERY_EMAIL_TASK_CONFIG = {
+    'name': 'send_email_task',
+    'ignore_result': True,
+}
+# pxhobjskmyntdcqs
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 25
+EMAIL_PORT = 465
 # your email
-EMAIL_HOST_USER = 'akpayev.nadir@gmail.com'
+EMAIL_HOST_USER = 'dabeerman32215@gmail.com'
 # password
-EMAIL_HOST_PASSWORD = 'Nadir19992406'
+EMAIL_HOST_PASSWORD = 'pxhobjskmyntdcqs'
+DEFAULT_FROM_EMAIL = 'default from email'

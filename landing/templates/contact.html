@@ -148,7 +148,7 @@
                             </div>
                         </form>                 {% endcomment %}
                         
-                        <form action="{% url 'landing_page:save_message' %}" method="post" role="form">
+                        <form action="{% url 'landing_page:save_and_send_message' %}" method="post" role="form">
                         {{ form.as_p }}
                             <div class="input__list">
                                 <input type="text" name="user_name" id="user_name" placeholder="Ваше имя" data-rule="minlen:4" data-msg="Пожалуйста, введите не менее 4 букв" />
