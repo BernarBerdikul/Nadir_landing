@@ -115,7 +115,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 465
 # your email
-EMAIL_HOST_USER = 'dabeerman32215@gmail.com'
+EMAIL_HOST_USER = 'akpayev.nadir@gmail.com'
 # password
 EMAIL_HOST_PASSWORD = 'pxhobjskmyntdcqs'
 DEFAULT_FROM_EMAIL = 'default from email'
