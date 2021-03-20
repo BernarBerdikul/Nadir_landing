@@ -14,7 +14,7 @@ djangorestframework-files==1.1.0
 dramatiq==1.8.1
 flake8==3.8.3
 gunicorn==20.0.4
-Jinja2==2.11.2
+Jinja2==2.11.3
 kombu==4.6.7
 Markdown==3.1.1
 MarkupSafe==1.1.1
