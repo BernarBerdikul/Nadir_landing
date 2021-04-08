@@ -2,7 +2,7 @@ amqp==2.5.2
 asgiref==3.2.10
 billiard==3.6.2.0
 celery==4.4.0
-Django==3.0.8
+Django==3.0.14
 django-appconf==1.0.4
 django-celery-email==3.0.0
 django-configurations==2.2
